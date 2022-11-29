@@ -120,15 +120,19 @@ const resetBoard = () => {
 
 
 
-const checkForWin = () => {
-  if (horizontalWin() || verticalWin() || diagonalWin()) {
-    window.alert(`Player ${currentMarker} won!`)
-    window.location.reload();
+// const checkForWin = () => {
+//   if (horizontalWin() || verticalWin() || diagonalWin()) {
+//     window.alert(`Player ${currentMarker} won!`)
+
     
-  } else {
-    changeMarker()
-  }
-}
+//     window.location.reload();
+    
+//   } else {
+//     changeMarker()
+//   }
+// }
+
+const checkForWin = () => {if(horizontalWin() || verticalWin() || diagonalWin()) {setTimeout(() => {window.alert(`Player ${currentMarker} won!`)}, 150)} else {changeMarker()}}
 
 const horizontalWin = () => {
   if (
